@@ -9,7 +9,7 @@ deploy:
   bucket: bootloadertest8783901
   acl: private
   skip_cleanup: true
-  local_dir:release
-  upload-dir:release_8783901
+  local_dir: release
+  upload-dir: release_8783901
   on:
     repo: chandra4cm/myshareobject
