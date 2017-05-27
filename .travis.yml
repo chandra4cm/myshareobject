@@ -1,6 +1,9 @@
+language: cpp
+
 script:
 - pwd
 - make clean && make release
+- ls -lrt release
 deploy:
   provider: s3
   access_key_id: AKIAJUTCT2BIL7BNI3PQ
