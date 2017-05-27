@@ -1,3 +1,15 @@
 script:
-  - pwd
-  - make clean && make release
+- pwd
+- make clean && make release
+deploy:
+  provider: s3
+  access_key_id: AKIAJUTCT2BIL7BNI3PQ
+  secret_access_key:
+    secure: a3av5sGp0hBa2pdLlBKlMV5BCNKLelq2L8OMANs2owCa0cbz9R2sUx98BovUCKs9rfKczqgKeVYZfcU4+TazmRDK+9olcORoEpalIxl79Pwa8mSqy43QQmJKFSOVHnxZwe6O/JJAnufdDYcUw0eaI9XGMKuYveV54tgBTf6s1Tf1aZHyJgw9hwhmmdC1NwGcDeoSsfzeBzYmdJF13GJfJTsEgi3SyRUNtufFRrWGHFzLA/Vc5maEeKIPNJ3KWZvDfAUcOH4Rx6BhyUVcYRu82cL75flowJRwLLcTz/MVot4ledby2Ws1LpQaf/iBE4rl20Zv25S3Y0OGR7MJltz9Wz2/N8URP/By35Q4dRjVs7GcPDUDQo9qtMsMgfmCgtlj5AvorGulEF1pjgrkj1SYijHC3s9ehiIQa8ZdWevdmYqxq0vFTHZebb84wUzy6qiaFoVZSJtIi0ExNE8xao/U0jqHCDMfMIa3RcFZaCP3qajDq/u+wkoiLxCHeWMJhX46nIISk7oHsIpQmjUVLHSiqHJxt3RF93a5BrFhGEQ/OefVOCJ6DpBBhCoandB0sUx9Ubmhu+IZYL4hBT3ZVFV73D+iyEPnJAI9SLrsosAlPaIcJ1pPV1MaOStTFxxAtkJ/kJHOwfLG/34ba5HpX2bSgeF/A8n0qelK8rXC/ufyNnE=
+  bucket: bootloadertest8783901
+  acl: private
+  skip_cleanup: true
+  local_dir:release
+  upload-dir:release_8783901
+  on:
+    repo: chandra4cm/myshareobject
