@@ -1,3 +1,4 @@
+FROM ubuntu:trusty
 language: cpp
 
 script:
